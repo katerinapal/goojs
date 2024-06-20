@@ -5,7 +5,15 @@
   "description": "Goo Engine - the WebGL graphics engine",
   "homepage": "http://goocreate.com/",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "flow:check": "flow check ./src/goo/math/Quaternion.js --max-workers 2",
+    "gen-test-suite-LinderSystem-test": "jasmine ./filtered-test-modules/LineRenderSystem-test.js",
+    "gen-test-suite-ParticleData-test": "jasmine ./filtered-test-modules/ParticleData-test.js",
+    "gen-test-suite-ColliderComponent-test": "jasmine ./filtered-test-modules/ColliderComponent-test.js",
+    
+    
+    
+    "gen-test-suite-drawLine": "jest --verbose ./generated-tests/LineRenderSystem_prototype_drawLine_LineRenderer_js.test.js --coverage=true"
   },
   "licenses": [
     {
@@ -24,6 +32,7 @@
     "estraverse": "~4.1.0",
     "file": "~0.2.2",
     "filesize": "^3.1.2",
+    "flow-bin": "^0.146.0",
     "glob": ">=5.0.6",
     "graceful-fs": "~3.0.6",
     "grunt": "~0.4.5",
@@ -66,7 +75,8 @@
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.12.1",
     "wrench": ">=1.5.8",
-    "zeparser": "^0.0.7"
+    "zeparser": "^0.0.7",
+    "jest": "^28.1.1"
   },
   "engines": {
     "node": ">=0.8.2"
