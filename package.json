@@ -6,14 +6,13 @@
   "homepage": "http://goocreate.com/",
   "scripts": {
     "test": "jasmine",
-    "flow:check": "flow check ./src/goo/math/Quaternion.js --max-workers 2",
     "gen-test-suite-LinderSystem-test": "jasmine ./filtered-test-modules/LineRenderSystem-test.js",
     "gen-test-suite-ParticleData-test": "jasmine ./filtered-test-modules/ParticleData-test.js",
     "gen-test-suite-ColliderComponent-test": "jasmine ./filtered-test-modules/ColliderComponent-test.js",
     
     
     
-    "gen-test-suite-drawLine": "jest --verbose ./generated-tests/LineRenderSystem_prototype_drawLine_LineRenderer_js.test.js --coverage=true"
+    "gen-test-suite": "jest --verbose ./generated-tests/LineRenderSystem_prototype_drawLine_LineRenderer_js_0.test.js --coverage=true"
   },
   "licenses": [
     {

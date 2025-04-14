@@ -16,6 +16,7 @@ var ObjectUtils = require('../util/ObjectUtils');
  * @param {number} z
  * @param {number} w
  */
+//function Quaternion(x: number, y, z, w) {
 function Quaternion(x, y, z, w) {
 	// @ifdef DEBUG
 	this._x = 0;
