@@ -5,14 +5,19 @@
   "description": "Goo Engine - the WebGL graphics engine",
   "homepage": "http://goocreate.com/",
   "scripts": {
-    "test": "jasmine",
+    "test-initial": "jasmine",
     "gen-test-suite-LinderSystem-test": "jasmine ./filtered-test-modules/LineRenderSystem-test.js",
     "gen-test-suite-ParticleData-test": "jasmine ./filtered-test-modules/ParticleData-test.js",
     "gen-test-suite-ColliderComponent-test": "jasmine ./filtered-test-modules/ColliderComponent-test.js",
+    "gen-test-suite": "jest --verbose ./generated-tests/LineRenderSystem_prototype_drawLine_LineRenderer_js_0.test.js --coverage=true",
+
+    "test-initial-mut-command": "jest ./filtered-test-modules/goojs-test-code-merged.test.js",
+    "test-generated-mut-command": "jest ./generated-tests-LineRenderSystem-drawLine/LineRenderSystem_prototype_drawLine_LineRenderer_js.test.js",
+
+    "gen-test-suite-02": "jest --verbose ./generated-tests/*.test.js",
     
     
-    
-    "gen-test-suite": "jest --verbose ./generated-tests/LineRenderSystem_prototype_drawLine_LineRenderer_js_0.test.js --coverage=true"
+    "test": "npm run test-initial-mut-command"
   },
   "licenses": [
     {
@@ -53,6 +58,7 @@
     "jasmine": "2.4.1",
     "jasmine-core": "^2.4.1",
     "jasmine-fixture": "^2.0.0",
+    "jest": "^28.1.1",
     "jshint": "2.7.0",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "0.1.12",
@@ -69,13 +75,20 @@
     "node-watch": "~0.3.4",
     "rimraf": "~2.3.3",
     "selenium-webdriver": "~2.45.1",
+    "stryker": "^0.35.1",
+    "stryker-api": "^0.24.1",
+    "stryker-babel-transpiler": "^0.10.1",
+    "stryker-html-reporter": "^0.18.1",
+    "stryker-jasmine": "^0.12.1",
+    "stryker-jasmine-runner": "^0.4.1",
+    "stryker-javascript-mutator": "^0.14.1",
+    "stryker-jest-runner": "^1.4.1",
     "uglify-js": "~2.4.21",
     "underscore": "~1.8.3",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.12.1",
     "wrench": ">=1.5.8",
-    "zeparser": "^0.0.7",
-    "jest": "^28.1.1"
+    "zeparser": "^0.0.7"
   },
   "engines": {
     "node": ">=0.8.2"
